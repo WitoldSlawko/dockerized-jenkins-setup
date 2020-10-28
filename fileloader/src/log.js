@@ -34,4 +34,4 @@ module.exports = {
   debug,
   warn,
   error
-}dzioba tu byla pisze
+}
