@@ -1,0 +1,8 @@
+# Idea
+.idea/
+*.iml
+
+# Jenkins
+data/
+!data/jenkins_home/config.xml
+!data/jobs/**/config.xml
