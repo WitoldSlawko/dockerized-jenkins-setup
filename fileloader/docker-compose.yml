@@ -1,0 +1,9 @@
+---
+version: '3.5'
+
+services:
+
+  jenkinsfile-loader:
+    image: docker.io/hoto/jenkinsfile-loader
+    build: .
+

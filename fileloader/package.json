@@ -1,0 +1,23 @@
+{
+  "name": "jenkinsfile-loader",
+  "version": "1.0.0",
+  "description": "Creates Jenkins jobs from Jenkinsfiles read from disk.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/main.js",
+    "test": "jest --verbose"
+  },
+  "author": "Andrzej Rehmann",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "0.18.0",
+    "chokidar": "2.0.4",
+    "colors": "1.3.2",
+    "fs-promise": "2.0.3",
+    "wait-on": "3.1.0"
+  },
+  "devDependencies": {
+    "axios-mock-adapter": "1.15.0",
+    "jest": "23.6.0"
+  }
+}
