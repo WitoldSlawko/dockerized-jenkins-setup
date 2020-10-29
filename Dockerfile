@@ -1,4 +1,4 @@
-FROM docker.io/jenkins/jenkins:2.141
+FROM docker.io/jenkins/jenkins:2.264
 
 USER root
 
