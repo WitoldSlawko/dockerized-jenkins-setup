@@ -32,7 +32,7 @@
             <jenkins.branch.BranchSource>
                 <source class="jenkins.plugins.git.GitSCMSource" plugin="git@3.9.1">
                     <id>7ef90984-c861-4327-9f40-9a4b6b5afaae</id>
-                    <remote>https://github.com/hoto/jenkins-shared-library.git</remote>
+                    <remote>https://github.com/WitoldSlawko/jenkins-shared-libraries-sets.git</remote>
                     <credentialsId></credentialsId>
                     <traits>
                         <jenkins.plugins.git.traits.BranchDiscoveryTrait/>
