@@ -1,10 +1,5 @@
-[![](https://images.microbadger.com/badges/image/hoto/jenkinsfile-examples.svg)](https://microbadger.com/images/hoto/jenkinsfile-examples "Get your own image badge on microbadger.com")
-# Jenkinsfiles Examples
-
 Collection of executable Jenkinsfiles loaded automatically into a dockerized Jenkins.
 Useful for experimenting or demos.
-
-![](./.images/001.png)
 
 ### Why
 
@@ -16,15 +11,10 @@ By design job has to be run manually.
 
 ### How it works
 
-[jenkinsfile-loader](https://github.com/hoto/jenkinsfile-loader) container uses Jenkins REST API to create Jenkins jobs directly from Jenkinsfiles located in `jenkinsfiles` directory.
+Jenkins jobs directly from Jenkinsfiles located in `jenkinsfiles` directory.
 It also monitors any change in that folder and will update, create or remove jobs accordingly.  
 All files must be named `<job_name>.groovy` where `<job_name>` will be used for the Jenkins job name.
 There is no auto-refresh, so after adding or removing files Jenkins page needs to be refreshed manually to reflect changes.
-
-### Blogs using this repository:
-
-* [Creating a Jenkinsfile pipeline](https://medium.com/@AndrzejRehmann/creating-a-jenkinsfile-pipeline-7aefc89b8c67)
-* [Private Jenkins Shared Libraries](https://medium.com/@AndrzejRehmann/private-jenkins-shared-libraries-540abe7a0ab7)
 
 ### Run
 
