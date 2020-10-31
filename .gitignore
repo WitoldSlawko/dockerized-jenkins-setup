@@ -8,3 +8,6 @@ data/
 !data/jobs/**/config.xml
 
 jenkins_home/
+!jenkins_home/.keep
+
+plugins

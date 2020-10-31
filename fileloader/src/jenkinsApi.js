@@ -33,6 +33,15 @@ const updateJob = ({jobName, configXml}) => {
 
 const createJob = ({jobName, configXml}) => {
   log.info(`Creating job ${jobName}...`)
+  console.log('=== logging jobs starts ===')
+  console.log('jobName : ', jobName)
+  console.log('configXml : ', configXml)
+  console.log('xmlHeaders : ', xmlHeaders)
+  console.log('config.jenkinsUrl : ', config.jenkinsUrl)
+  console.log('config: ', config)
+  // console.log(' : ', )
+  // console.log(' : ', )
+  console.log('=== logging jobs ends ===')
   return axios
     .post(`${config.jenkinsUrl}/createItem?name=${jobName}`, configXml, xmlHeaders)
 }
