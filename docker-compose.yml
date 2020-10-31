@@ -6,6 +6,7 @@ services:
     # image: docker.io/hoto/jenkinsfile-examples
     build:
       context: .
+    container_name: 'jenkins_instance'
     ports:
     - target: 8080
       published: 8080
@@ -22,6 +23,7 @@ services:
     # image: docker.io/hoto/jenkinsfile-loader:1.1.0
     build:
       context: ./fileloader
+    container_name: 'jenkinsfile_loader'
     environment:
       JENKINS_URL: 'http://jenkins:8080'
       CONFIGS_XML_DIR: '/usr/local/src/configs'
