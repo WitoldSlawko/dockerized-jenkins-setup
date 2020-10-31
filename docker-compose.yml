@@ -18,12 +18,15 @@ services:
         source: '/var/run/docker.sock'
         target: '/var/run/docker.sock'
         read_only: true
+    networks:
+      - jenkins-network
+    tty: true
       # - type: bind
       #   source: './jenkins_home/'
       #   target: '/var/jenkins_home/'
     # networks:
     # - jenkins-network
-    tty: true
+    # tty: true
 
 #   jenkinsfile-loader:
 #     # image: docker.io/hoto/jenkinsfile-loader:1.1.0
@@ -50,5 +53,5 @@ services:
 #     - jenkins-network
 #     tty: true
 
-# networks:
-#   jenkins-network:
+networks:
+  jenkins-network:
