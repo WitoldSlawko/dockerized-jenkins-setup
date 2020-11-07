@@ -3,7 +3,6 @@ version: '3.5'
 services:
 
   jenkins:
-    # image: docker.io/jenkins/jenkins:2.264
     build:
       context: .
     container_name: 'jenkins_instance'
@@ -11,47 +10,12 @@ services:
     - target: 8080
       published: 8080
     env_file: ./configs/runtime.env
-    # environment:
-    #   JENKINS_URL: "http://${$(/sbin/ifconfig wlp2s0 | grep -i mask | awk '{print $2}'| cut -f2 -d:)}:8080"
     volumes:
       - type: bind
         source: '/var/run/docker.sock'
         target: '/var/run/docker.sock'
         read_only: true
-    networks:
-      - jenkins-network
+      - type: bind
+        source: './jenkins_home/'
+        target: '/var/jenkins_home/'
     tty: true
-      # - type: bind
-      #   source: './jenkins_home/'
-      #   target: '/var/jenkins_home/'
-    # networks:
-    # - jenkins-network
-    # tty: true
-
-#   jenkinsfile-loader:
-#     # image: docker.io/hoto/jenkinsfile-loader:1.1.0
-#     build:
-#       context: ./fileloader
-#     container_name: 'jenkinsfile_loader'
-#     environment:
-#       JENKINS_URL: 'http://jenkins:8080'
-#       CONFIGS_XML_DIR: '/usr/local/src/configs'
-#       JENKINSFILES_DIR: '/usr/local/src/jenkinsfiles'
-#       DEBUG: 'false'
-#     volumes:
-#     - type: bind
-#       source: '${PWD}/configs'
-#       target: '/usr/local/src/configs'
-#       read_only: true
-#     - type: bind
-#       source: '${PWD}/jenkinsfiles'
-#       target: '/usr/local/src/jenkinsfiles'
-#       read_only: true
-#     depends_on:
-#     - jenkins
-#     networks:
-#     - jenkins-network
-#     tty: true
-
-networks:
-  jenkins-network:
