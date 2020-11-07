@@ -9,13 +9,6 @@ Unfortunately the best way to test a Jenkinsfile is to run it in a Jenkins insta
 This project takes away the manual process of copying and pasting a Jenkinsfile into a Jenkins job configuration.
 By design job has to be run manually.
 
-### How it works
-
-Jenkins jobs directly from Jenkinsfiles located in `jenkinsfiles` directory.
-It also monitors any change in that folder and will update, create or remove jobs accordingly.  
-All files must be named `<job_name>.groovy` where `<job_name>` will be used for the Jenkins job name.
-There is no auto-refresh, so after adding or removing files Jenkins page needs to be refreshed manually to reflect changes.
-
 ### Run
 
 This will pull and start latest docker images
@@ -80,5 +73,4 @@ If you just want to test new plugins without committing them to git then stop at
         
 ### Components:
   - [jenkins](https://hub.docker.com/_/jenkins/) - Customized with pre-installed plugins and disabled authentication.
-  - [jenkinsfile-loader](https://github.com/hoto/jenkinsfile-loader) - Uses Jenkins API and creates jobs directly from Jenkinsfiles.
   
